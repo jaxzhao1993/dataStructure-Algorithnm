@@ -1,3 +1,4 @@
+
 package circleQueue;
 
 public class CircleArrayQueue {
@@ -44,7 +45,7 @@ public class CircleArrayQueue {
 		{
 			System.err.println("队列满，无法加入数据");
 			return;
-		}
+	}
 		array[rear] = element;
 		rear = (rear+1) % maxSize;
 			
