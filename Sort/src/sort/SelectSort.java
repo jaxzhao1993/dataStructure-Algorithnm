@@ -10,10 +10,11 @@ public class SelectSort {
 	public static void selSort(int[] array) {
 		int temp = 0;
 		int index;
+		//时间复杂度仍然是 O（n^2）
 		for (int i = 0; i < array.length-1; i++) {
 			//从a[i]到a[length-1]找到最小值，并与a[i]交换
 			index = i;
-			for (int j = i; j < array.length; j++) {
+			for (int j = i+1; j < array.length; j++) {
 				if (array[j]<array[index]) {
 					index = j;
 				}
