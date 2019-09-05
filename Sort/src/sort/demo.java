@@ -6,11 +6,11 @@ import java.util.Date;
 
 public class demo {
 	public static void main(String[] args) {
-		int[] array = new int[8000000];
-		for (int i = 0; i < 8000000; i++) {
+		int[] array = new int[80000];
+		for (int i = 0; i < 80000; i++) {
 			array[i] = (int)(Math.random()*8000000);
 		}
-		
+		int[] temp = new int[array.length];
 		int[] array2 = {-1,8,5,7,6,3,10,8};
 //		Date date1 = new Date();
 //		SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
@@ -18,7 +18,8 @@ public class demo {
 //		System.out.println("排序前:" +dateString);
 		long startTime=System.currentTimeMillis();
 //		System.out.println(Arrays.toString(array));
-		QuickSort.quickSort(array, 0, array.length-1);//80000个数据排序，大约20 毫秒 8百万个数据, 1000ms
+		MergeSort.mergeSort(array, 0, array.length-1, temp);//80000个数据排序，大约20 毫秒
+	//	QuickSort.quickSort(array, 0, array.length-1);//80000个数据排序，大约20 毫秒 8百万个数据, 1000ms
 	//	System.out.println(Arrays.toString(array));
 	//	ShellSort.shellSort2(array);//80000个数据排序，大约25 毫秒    8百万个数据, 2072ms
 	//	ShellSort.shellSort(array);//80000个数据排序，大约 6000 毫秒
