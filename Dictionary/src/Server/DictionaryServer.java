@@ -29,6 +29,8 @@ public class DictionaryServer extends Frame{
 	TextArea content = new TextArea();
 	
 	public static void main(String[] args) {
+		port = Integer.parseInt(args[0]);
+		max_client = Integer.parseInt(args[1]);
 		new DictionaryServer().launchFrame();
 	}
 

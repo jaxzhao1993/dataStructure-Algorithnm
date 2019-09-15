@@ -28,6 +28,8 @@ public class DictionaryClient extends Frame{
 		private boolean bConnected = false;
 		
 		public static void main(String[] args) {
+			address = args[0];
+			port = Integer.parseInt(args[1]);
 			new DictionaryClient().launchFrame();
 		}
 		

@@ -18,7 +18,8 @@ public class demo {
 //		System.out.println("排序前:" +dateString);
 		long startTime=System.currentTimeMillis();
 //		System.out.println(Arrays.toString(array));
-		RadixSort.radixSort(array);  //8百万个数据, 500ms //当8000万个数据后，会出现内存不足
+		HeapSort.heapSort(array);
+	//	RadixSort.radixSort(array);  //8百万个数据, 500ms //当8000万个数据后，会出现内存不足
 	//	MergeSort.mergeSort(array, 0, array.length-1, temp);//80000个数据排序，大约20 毫秒
 	//	QuickSort.quickSort(array, 0, array.length-1);//80000个数据排序，大约20 毫秒 8百万个数据, 1000ms
 	//	System.out.println(Arrays.toString(array));

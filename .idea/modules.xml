@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/8 queen/8 queen.iml" filepath="$PROJECT_DIR$/8 queen/8 queen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinaryTree/BinaryTree.iml" filepath="$PROJECT_DIR$/BinaryTree/BinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dictionary/Dictionary.iml" filepath="$PROJECT_DIR$/Dictionary/Dictionary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GUI/GUI.iml" filepath="$PROJECT_DIR$/GUI/GUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTable/HashTable.iml" filepath="$PROJECT_DIR$/HashTable/HashTable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OnlineBookShopProject/OnlineBookShopProject.iml" filepath="$PROJECT_DIR$/OnlineBookShopProject/OnlineBookShopProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SearchAlgorithnm/SearchAlgorithnm.iml" filepath="$PROJECT_DIR$/SearchAlgorithnm/SearchAlgorithnm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Servers/Servers.iml" filepath="$PROJECT_DIR$/Servers/Servers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SocketDemo/SocketDemo.iml" filepath="$PROJECT_DIR$/SocketDemo/SocketDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sort/Sort.iml" filepath="$PROJECT_DIR$/Sort/Sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpraseArray/SpraseArray.iml" filepath="$PROJECT_DIR$/SpraseArray/SpraseArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleLinkedList/circleLinkedList.iml" filepath="$PROJECT_DIR$/circleLinkedList/circleLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doubleLinkedList/doubleLinkedList.iml" filepath="$PROJECT_DIR$/doubleLinkedList/doubleLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/io/io.iml" filepath="$PROJECT_DIR$/io/io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkedList/linkedList.iml" filepath="$PROJECT_DIR$/linkedList/linkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recursion/recursion.iml" filepath="$PROJECT_DIR$/recursion/recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stack/stack.iml" filepath="$PROJECT_DIR$/stack/stack.iml" />
+    </modules>
+  </component>
+</project>
