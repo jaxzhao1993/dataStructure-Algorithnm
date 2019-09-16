@@ -1,0 +1,6 @@
+创建“I LIKE like java do you like java”对应的huffman树
+思路：
+（1） Node{data, weight, left, right}
+ (2) 得到字符串对应的byte[] 
+ (3) 编写一个方法，将准备huffman树的Node节点 放入list，形式Node[data=97], weight=4	
+ (4) 通过list创建对应的树
