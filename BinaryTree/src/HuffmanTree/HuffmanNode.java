@@ -2,57 +2,36 @@ package HuffmanTree;
 
 
 public class HuffmanNode implements Comparable<HuffmanNode>{
+	 Byte dataByte; //存放数据本身 比如'a'=>97 ' '=32
+	 int weight; //权值,数据出现的次数
+	 HuffmanNode left;
+	 HuffmanNode right;
 	
-	private int value;//节点全职
-	HuffmanNode leftNode;
-	HuffmanNode rightNode;
-	
-	public HuffmanNode(int value) {
-		this.value = value;
-	}
-
-	@Override
-	public String toString() {
-		return "Node [value=" + value + "]";
+	 public HuffmanNode(Byte dataByte, int weight) {
+		this.dataByte = dataByte;
+		this.weight = weight;
 	}
 
 	@Override
 	public int compareTo(HuffmanNode o) {
-		return this.value-o.value; //从小到大排序
+		
+		return this.weight-o.weight;
 	}
 
-	public int getValue() {
-		return value;
+	@Override
+	public String toString() {
+		return "HuffmanNode [dataByte=" + dataByte + ", weight=" + weight + "]";
 	}
-
-	public void setValue(int value) {
-		this.value = value;
-	}
-
-	public HuffmanNode getLeftNode() {
-		return leftNode;
-	}
-
-	public void setLeftNode(HuffmanNode leftNode) {
-		this.leftNode = leftNode;
-	}
-
-	public HuffmanNode getRightNode() {
-		return rightNode;
-	}
-
-	public void setRightNode(HuffmanNode rightNode) {
-		this.rightNode = rightNode;
-	}
-	//前序遍历：
+	 
 	public void preOrder() {
 		System.out.println(this);
-		if (this.leftNode!=null) {
-			this.leftNode.preOrder();
+		if (this.left!=null) {
+			this.left.preOrder();
 		}
-		if (this.rightNode!=null) {
-			this.rightNode.preOrder();
+		if (this.right!=null) {
+			this.right.preOrder();
 		}
 	}
-	
+	 
+	 
 }
