@@ -1,6 +1,6 @@
-package BinaryTree;
+package avlTree;
 
-public class BinarySortTree {
+public class AvlTree {
 	private Node rootNode;
 	
 	public void add(Node node) {

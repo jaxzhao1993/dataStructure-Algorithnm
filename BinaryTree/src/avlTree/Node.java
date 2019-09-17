@@ -1,4 +1,4 @@
-package BinaryTree;
+package avlTree;
 
 public class Node {
 	Node leftNode;
@@ -9,6 +9,26 @@ public class Node {
 		this.value = value;
 	}
 	
+	//返回以当前节点为根节点的左子树，右子树高度
+	public int leftHeight() {
+		 if(leftNode==null){
+			 return 0;
+		 }else {
+			return this.leftNode.height();
+		}
+	}
+	
+	public int rightHeight() {
+		 if(rightNode==null){
+			 return 0;
+		 }else {
+			return rightNode.height();
+		}
+	}
+	
+	public int height() {
+		return Math.max(leftNode==null? 0:leftNode.height(), rightNode==null? 0:rightNode.height())+1;
+	}
 	//添加节点的方法，需要满足二叉排序树的要求
 	//递归的形式添加
 	public void add(Node node) {
