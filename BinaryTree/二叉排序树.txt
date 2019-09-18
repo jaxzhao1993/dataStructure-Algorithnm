@@ -1,0 +1,82 @@
+删除节点思路：
+	1.找到targetNode
+	2.找到targetNode的父节点
+	3.判断target是parent的左子还是右子
+	4.parent.left || parent.right = null
+
+	如果target下面还有1个节点:
+	1.找到targetNode
+	2.找到targetNode的父节点
+	3.判断target是parent的左子还是右子
+    	4.1 parent.left = target.left
+    	4.2 parent.left = target.right 
+
+    	4.3 parent.right =target.right
+    	4.4 parent.right = target.left
+
+    如果target下面有子树:
+   	1.找到targetNode
+	2.找到targetNode的父节点
+	3.找到target节点右子树下的最小值
+	4.target.value = temp.value;
+	4.delete temp;
+
+平衡二叉树：
+	空树，或者左右子树高度差最多为1
+
+	当高度差大于1时，
+	public int leftHeight() {
+		 if(leftNode==null){
+			 return 0;
+		 }else {
+			return this.leftNode.height();
+		}
+	}
+	
+	public int rightHeight() {
+		 if(rightNode==null){
+			 return 0;
+		 }else {
+			return rightNode.height();
+		}
+	}
+	
+	public int height() {
+		return Math.max(leftNode==null? 0:leftNode.height(), rightNode==null? 0:rightNode.height())+1;
+	}
+
+
+public void leftRotate() {
+		//创建新的节点，值=当前节点
+		Node newNode = new Node(this.value);
+		//把新节点的左子树 = 当前节点的左子树
+		newNode.leftNode = this.leftNode;
+		//新节点的右子树 = 当前节点右子树.左子树
+//		if (this.rightNode.leftNode!=null) {
+//			newNode.rightNode = this.rightNode.leftNode;
+//		}else {
+//			newNode.rightNode = this.rightNode;
+//		}
+		newNode.rightNode = this.rightNode.leftNode;
+		//把当前节点的值替换为右子节点的值
+		this.value = this.rightNode.value;
+		//当前节点的右子树 = 原右子树的右子树
+		this.rightNode = this.rightNode.rightNode;
+		//把当前节点的左子树,设置成新的节点
+		this.leftNode = newNode;
+	
+	}
+
+	public void rightRotate() {
+		Node newNode = new Node(value);
+		//新节点右子树 = 当前节点的右子树
+		newNode.rightNode = rightNode;
+		//新节点的左子树 = 当前节点左子树的右子树
+		newNode.leftNode = leftNode.rightNode;
+		//当前节点的值替换为原左子节点的值
+		value = leftNode.value;
+		//当前节点的左子树 =原左子树的左子树
+		leftNode = leftNode.leftNode;
+		//把当前节点的右子树,设置成新的节点
+		rightNode = newNode;
+	}

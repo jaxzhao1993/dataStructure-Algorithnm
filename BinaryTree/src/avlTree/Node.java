@@ -49,6 +49,25 @@ public class Node {
 				this.rightNode.add(node);
 			}
 		}
+		//当添加完一个节点后： （rightHeight - leftHeight）>1 =>左旋转
+		if(rightHeight() - leftHeight() >1) {
+			if (rightNode.leftHeight()> rightNode.rightHeight()) {
+				rightNode.leftRotate();
+			}
+			leftRotate();
+			return;
+		}
+		
+		if (leftHeight() - rightHeight() >1) {
+			//如果左子树的右子树》 左子树左子树的高度，
+			if (leftNode.rightHeight() > leftNode.leftHeight()) {
+				//先对左子树进行左旋转
+				leftNode.leftRotate();
+			}
+			rightRotate();
+			return;
+		}
+		
 	}
 	
 	public void infixOrder() {
@@ -111,5 +130,40 @@ public class Node {
 		}else {
 			return this.value;
 		}
+	}
+
+	public void leftRotate() {
+		//创建新的节点，值=当前节点
+		Node newNode = new Node(this.value);
+		//把新节点的左子树 = 当前节点的左子树
+		newNode.leftNode = this.leftNode;
+		//新节点的右子树 = 当前节点右子树.左子树
+//		if (this.rightNode.leftNode!=null) {
+//			newNode.rightNode = this.rightNode.leftNode;
+//		}else {
+//			newNode.rightNode = this.rightNode;
+//		}
+		newNode.rightNode = this.rightNode.leftNode;
+		//把当前节点的值替换为右子节点的值
+		this.value = this.rightNode.value;
+		//当前节点的右子树 = 原右子树的右子树
+		this.rightNode = this.rightNode.rightNode;
+		//把当前节点的左子树,设置成新的节点
+		this.leftNode = newNode;
+	
+	}
+
+	public void rightRotate() {
+		Node newNode = new Node(value);
+		//新节点右子树 = 当前节点的右子树
+		newNode.rightNode = rightNode;
+		//新节点的左子树 = 当前节点左子树的右子树
+		newNode.leftNode = leftNode.rightNode;
+		//当前节点的值替换为原左子节点的值
+		value = leftNode.value;
+		//当前节点的左子树 =原左子树的左子树
+		leftNode = leftNode.leftNode;
+		//把当前节点的右子树,设置成新的节点
+		rightNode = newNode;
 	}
 }
